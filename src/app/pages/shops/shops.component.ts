@@ -19,19 +19,15 @@ export class ShopsComponent implements OnInit {
   intensive;
   course;
 
-  constructor(protected products: ProductsService, private telegram: TelegramService, private route: ActivatedRoute) {
+  constructor(private products: ProductsService, private telegram: TelegramService,private route: ActivatedRoute) {
     this.telegram.BackButton?.hide();
   }
 
 
   ngOnInit(): void {
-    // this.skill   = this.products.byGroup['skill'];
-    // this.intensive = this.products.byGroup['intensive'];
-    // this.course = this.products.byGroup['course'];
-    const productData = this.route.snapshot.data['productData'];
-    this.skill = productData[ProductType.Skill];
-    this.intensive = productData[ProductType.Intensive];
-    this.course = productData[ProductType.Course];
+    this.skill   = this.products.byGroup['skill'];
+    this.intensive = this.products.byGroup['intensive'];
+    this.course = this.products.byGroup['course'];
   }
 
 }
