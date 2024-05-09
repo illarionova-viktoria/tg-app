@@ -15,7 +15,7 @@ export class ShopsComponent implements OnInit {
   // telegram = inject(TelegramService);
   // products = inject(ProductsService);
 
-  skill;
+  teacher;
   intensive;
   course;
 
@@ -25,7 +25,7 @@ export class ShopsComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.skill   = this.products.byGroup['skill'];
+    this.teacher   = this.products.byGroup['teacher'];
     this.intensive = this.products.byGroup['intensive'];
     this.course = this.products.byGroup['course'];
   }
